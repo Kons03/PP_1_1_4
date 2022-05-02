@@ -20,15 +20,12 @@ public class Main {
         userv.saveUser(user3.getName(), user3.getLastName(), user3.getAge());
         userv.saveUser(user4.getName(), user4.getLastName(), user4.getAge());
 
-        userv.removeUserById(1);
         List<User> strings = userv.getAllUsers();
         for (User i : strings)
             System.out.println(i);
 
         userv.cleanUsersTable();
         userv.dropUsersTable();
-        Util.closeConnection();
-
 
     }
 }

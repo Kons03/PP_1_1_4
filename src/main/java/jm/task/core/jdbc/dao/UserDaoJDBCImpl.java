@@ -10,6 +10,7 @@ public class UserDaoJDBCImpl implements UserDao {
     private Connection connection;
 
     public UserDaoJDBCImpl() {
+
         connection = Util.getMySQLConnection();
     }
 
@@ -65,7 +66,6 @@ public class UserDaoJDBCImpl implements UserDao {
             try {
                 connection.rollback();
             } catch (SQLException e) {
-                e.printStackTrace();
             }
         }
     }
@@ -85,7 +85,6 @@ public class UserDaoJDBCImpl implements UserDao {
             try {
                 connection.rollback();
             } catch (SQLException e) {
-                e.printStackTrace();
             }
         }
     }
@@ -112,7 +111,6 @@ public class UserDaoJDBCImpl implements UserDao {
         try {
             connection.rollback();
         } catch (SQLException e) {
-            e.printStackTrace();
         }
     }
         return list;
