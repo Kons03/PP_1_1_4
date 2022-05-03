@@ -46,7 +46,7 @@ public class UserDaoHibernateImpl implements UserDao {
             System.out.println("Таблица удалена.");
             transaction.commit();
         } catch (Exception e) {
-            System.out.println("Таблица не удалена.");
+            System.out.println("Таблица не удалена!");
             if (transaction != null) {
                 transaction.rollback();
             }
@@ -76,7 +76,7 @@ public class UserDaoHibernateImpl implements UserDao {
             session.createQuery("DELETE FROM User WHERE id = id").executeUpdate();
             transaction.commit();
         } catch (Exception e) {
-            System.out.println("Не удалось удалить пользователя.");
+            System.out.println("Не удалось удалить пользователя!");
             if (transaction != null) {
                 transaction.rollback();
             }
@@ -100,7 +100,7 @@ public class UserDaoHibernateImpl implements UserDao {
             transaction.commit();
             System.out.println("Таблица очищена.");
         } catch (Exception e) {
-            System.out.println("Не удалось очистить таблицу.");
+            System.out.println("Не удалось очистить таблицу!");
             if (transaction != null) {
                 transaction.rollback();
             }
